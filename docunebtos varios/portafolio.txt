@@ -1,0 +1,4 @@
+Importancia de un portafolio de producto en la identidad profesional
+El portafolio es una herramienta esencial para un desarrollador. Consiste en la elaboración de uno o más productos digitales que demuestran la aplicación práctica de las competencias del curso. Sirve como una carta de presentación tangible ante los reclutadores, mostrando no solo lo que sabes, sino lo que eres capaz de construir.
+
+Un portafolio bien estructurado en plataformas como GitHub es un activo clave para potenciar tu perfil profesional en la industria TI.
