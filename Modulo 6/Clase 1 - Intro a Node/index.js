@@ -17,4 +17,4 @@ setTimeout(() => {
 // 1. Inicio del programa
 // 2. Fin de operaciones síncronas
 // 4. Lectura de BD completada (1 segundo después)
-// 3. Timeout completado (2 segundos después)
+// 3. Timeout completado (2 segundos después)run app.js
