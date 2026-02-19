@@ -1,0 +1,19 @@
+{
+  "name": "node-pug-bootstrap-538",
+  "version": "1.0.0",
+  "description": "Proyecto profesional Express + Pug + Bootstrap 5.3.8",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "express": "^4.22.1",
+    "hbs": "^4.2.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

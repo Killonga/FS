@@ -1,0 +1,14 @@
+extends layout
+block content
+  .container.py-5
+    h1.mb-4 #{title}
+    .list-group
+      each oferta in trabajos
+        .list-group-item.d-flex.justify-content-between.align-items-center
+          span #{oferta.puesto}
+          span.badge.bg-primary #{oferta.modalidad}
+
+      each practica in practicas
+        .list-group-item.d-flex.justify-content-between.align-items-center
+          span #{practica.puesto}
+          span.badge.bg-primary #{practica.modalidad}

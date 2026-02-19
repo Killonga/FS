@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1771369419001,
+    "nombre": "Chokita",
+    "precio": 350
+  },
+  {
+    "id": 1771369814156,
+    "nombre": "Pap 350ml",
+    "precio": 850
+  },
+  {
+    "id": 1771369898225,
+    "nombre": "Bilz 350ml",
+    "precio": 1000
+  },
+  {
+    "id": 1771369898306,
+    "nombre": "Bilz 350ml",
+    "precio": 1000
+  },
+  {
+    "id": 1771369898314,
+    "nombre": "Bilz 350ml",
+    "precio": 1000
+  },
+  {
+    "id": 1771370180616,
+    "nombre": "Morocha 80 gr.",
+    "precio": 400
+  },
+  {
+    "id": 1771370180631,
+    "nombre": "Morocha 80 gr.",
+    "precio": 400
+  },
+  {
+    "id": 1771370180642,
+    "nombre": "Morocha 80 gr.",
+    "precio": 400
+  },
+  {
+    "id": 1771370321568,
+    "nombre": "Selz",
+    "precio": 450
+  },
+  {
+    "id": 1771370321687,
+    "nombre": "Selz",
+    "precio": 450
+  },
+  {
+    "id": 1771370459261,
+    "nombre": "Baton",
+    "precio": 150
+  },
+  {
+    "id": 1771370696381,
+    "nombre": "Kitkat",
+    "precio": 350
+  },
+  {
+    "id": 1771455604038,
+    "nombre": "Huesillos 600 gr.",
+    "precio": 3500
+  }
+]
