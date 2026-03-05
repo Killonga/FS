@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Archivos de entorno (¡NUNCA subir .env a GitHub!)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+app.js
+clase.md
+database_biblioteca.sql
+readme.md

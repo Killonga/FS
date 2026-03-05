@@ -1,0 +1,19 @@
+{
+  "name": "api-biblioteca",
+  "version": "1.0.0",
+  "description": "API de biblioteca para aprender consultas a BD con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.10.0",
+    "pg-cursor": "^2.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

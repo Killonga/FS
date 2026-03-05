@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de mercado</title>
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de Lavauto</h1>
+        <p>Su opinion es muy importante para mejorar nuestro servicio de lavado</p>
+    </header>
+    <main>
+        <div class="flex-container">
+            <form id="formulario">
+                <h2>Formulario de Satisfacción</h2>
+                <div class="flex-container">
+                    <div class="grupo">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escriba Nombre y Apellido"
+                            required="">
+                    </div>
+                    <div class="grupo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="sucorreo@algo.com" requeried="">
+                    </div>
+
+
+                    <div class="grupo">
+                        <label for="edad">Edad</label>
+                        <input type="range" id="edad" name="edad" min="18" max="65" value="25"
+                            oninput="document.getElementById('valorEdad').textContent = this.value">
+                        <span id="valorEdad">25</span> años
+                    </div>
+
+                    <div class="grupo">
+                        <label>¿Se sintió conforme con el servicio?</label>
+                        <div class="opciones-radio">
+                            <label>
+                                <input type="radio" name="conforme" value="1"> No
+                            </label>
+                            <label>
+                                <input type="radio" name="conforme" value="2"> Más o menos
+                            </label>
+                            <label>
+                                <input type="radio" name="conforme" value="3"> Sí
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <label for="sugerencia">Diganos como podemos mejorar, su opinion es importante para
+                        nosotros</label>
+                    <textarea id="sugerencia" name="sugerencia" rows="6"></textarea>
+                </div>
+        </div>
+        <button type="submit">Enviar formulario</button>
+
+        <div class="grupo">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+        </form>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

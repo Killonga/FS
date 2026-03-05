@@ -1,0 +1,15 @@
+{
+  "name": "servidor-html-estatico",
+  "version": "1.0.0",
+  "description": "Servidor para vistas html con recursos imagenes y css",
+  "license": "ISC",
+  "author": "RGC",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

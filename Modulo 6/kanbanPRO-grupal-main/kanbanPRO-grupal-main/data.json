@@ -1,0 +1,76 @@
+[
+  {
+    "id": "",
+    "name": "Lista de ejemplo",
+    "tasks": [
+      {
+        "id": "1",
+        "titulo": "tarea 1",
+        "descripcion": "Texto descrip",
+        "prioridad": "Feature | Task | Bug | Improvement",
+        "TAG": "(Tipo de tarjet , si es para resolver un BUG o es un HOTFIX o una FEATURE)",
+        "estado": "(Backlog | Doing | Review | Done)",
+        "fecha_creacion": "",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "autor": "",
+        "responsable": ""
+      },
+      {
+        "id": 1771896357091,
+        "titulo": "se crea tarea vacia\r\n",
+        "descripcion": "",
+        "prioridad": "",
+        "TAG": "",
+        "estado": "",
+        "fecha_creacion": "",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "autor": "",
+        "responsable": ""
+      }
+    ]
+  },
+  {
+    "id": "",
+    "name": "lista 2",
+    "tasks": [
+      {
+        "id": "1",
+        "titulo": "tarea 1",
+        "descripcion": "Texto descrip",
+        "prioridad": "Feature | Task | Bug | Improvement",
+        "TAG": "(Tipo de tarjet , si es para resolver un BUG o es un HOTFIX o una FEATURE)",
+        "estado": "(Backlog | Doing | Review | Done)",
+        "fecha_creacion": "",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "autor": "",
+        "responsable": ""
+      },
+      {
+        "id": "2",
+        "titulo": "Ejemplo de tarea",
+        "descripcion": "asadsa",
+        "prioridad": "Feature | Task | Bug | Improvement",
+        "TAG": "(Tipo de tarjet , si es para resolver un BUG o es un HOTFIX o una FEATURE)",
+        "estado": "(Backlog | Doing | Review | Done)",
+        "fecha_creacion": "",
+        "fecha_inicio": "",
+        "fecha_fin": "",
+        "autor": "",
+        "responsable": ""
+      }
+    ]
+  },
+  {
+    "id": "1771895312120",
+    "name": "mi lista",
+    "tasks": []
+  },
+  {
+    "id": "1771895316678",
+    "name": "otra mas",
+    "tasks": []
+  }
+]

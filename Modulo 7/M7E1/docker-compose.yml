@@ -1,0 +1,16 @@
+services:
+  db:
+    image: "postgres:alpine3.19"
+    container_name: modulo7
+    restart: always
+    environment:
+      POSTGRES_USER: "marco"
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "modulo7"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/postgres:/docker-entrypoint-initdb.d
+      # - ./postgres:/var/lib/postgresql/data
+volumes:
+  pgdata:

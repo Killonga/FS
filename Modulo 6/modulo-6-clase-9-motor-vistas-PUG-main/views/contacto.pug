@@ -1,0 +1,15 @@
+extends layout
+block content
+  .container.py-5
+    h1.mb-4 #{title}
+    form
+      .mb-3
+        label.form-label Nombre
+        input.form-control(type="text")
+      .mb-3
+        label.form-label Email
+        input.form-control(type="email")
+      .mb-3
+        label.form-label Mensaje
+        textarea.form-control(rows="4")
+      button.btn.btn-success(type="submit") Enviar

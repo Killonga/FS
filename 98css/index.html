@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi PC - Windows 98 style</title>
+  <link rel="stylesheet" href="98.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="taskbar">
+      <button class="start">◀ Inicio</button>
+      <div class="taskbar-items">Mi PC</div>
+      <div class="clock" id="reloj">12:00</div>
+    </div>
+
+    <main class="windows">
+
+      <section class="window">
+        <div class="titlebar">
+          <div class="title">Mi PC</div>
+          <div class="controls">
+            <button class="btn-square">_</button>
+            <button class="btn-square">☐</button>
+            <button class="btn-square">✖</button>
+          </div>
+        </div>
+        <div class="menubar">
+          <div>Archivo</div>
+          <div>Editar</div>
+          <div>Ver</div>
+          <div>Favoritos</div>
+          <div>Ayuda</div>
+        </div>
+        <div class="window-body">
+          <div class="left-pane">
+
+            <div class="root-menu">
+              <h4>Estructura del proyecto</h4>
+              <ul class="root-tree">
+                <li class="folder"><span class="caret">.vscode</span>
+                  <ul class="nested">
+                    <li>settings.json</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">1mer</span>
+                  <ul class="nested">
+                    <li>css.html</li>
+                    <li>CV/</li>
+                    <li>hola-mundo/</li>
+                    <li>index.html</li>
+                    <li>MitchiriNeko.mp3</li>
+                    <li>NOTAS.txt</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">98css</span>
+                  <ul class="nested">
+                    <li>98.css</li>
+                    <li>index.html</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">docunebtos varios</span>
+                  <ul class="nested">
+                    <li>ejercicio 2 modulo 2.txt</li>
+                    <li>Actividad_Hola_Mundo[1].pdf</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">Modulo 2 - Clase 5</span>
+                  <ul class="nested">
+                    <li>flexgrid.html</li>
+                    <li>index.html</li>
+                    <li>index2.html</li>
+                    <li>index3.html</li>
+                    <li>index4.html</li>
+                    <li>mobile-first-responsivo.md</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">Modulo 2 - Clase 7</span>
+                  <ul class="nested">
+                    <li>clase_mobile_first_flexbox_grid.md</li>
+                    <li>flexbox_gridCSS/</li>
+                    <li>flexbox_responsivo/</li>
+                    <li>imagen_responsiva/</li>
+                    <li>parrafo_responsivo_font/</li>
+                    <li>tabla_responsiva/</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">reponsivo</span>
+                  <ul class="nested">
+                    <li>index.html</li>
+                    <li>README.md</li>
+                    <li>style.css</li>
+                  </ul>
+                </li>
+                <li class="folder"><span class="caret">Tarea Módulo 2 - Clase 4</span>
+                  <ul class="nested">
+                    <li>doc.pdf</li>
+                    <li>modulo clase 4/</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="folders">
+              <li>Disco local (C:)</li>
+              <li>Documentos</li>
+              <li>Imágenes</li>
+              <li>Descargas</li>
+            </ul>
+          </div>
+          <div class="right-pane">
+            <div class="toolbar">
+              <button class="btn" id="btn-load-local">Cargar .txt</button>
+              <input type="file" id="file-input" accept=".txt" style="display:none">
+              <button class="btn" id="btn-clear">Limpiar visor</button>
+            </div>
+
+            <div class="text-viewer" id="text-viewer" aria-live="polite">
+              <div class="viewer-header">Visor de texto <span id="viewer-filename" style="font-weight:600;margin-left:.5rem"></span></div>
+              <pre id="text-viewer-content" class="viewer-content">(Seleccione un archivo .txt desde la lista o use "Cargar .txt")</pre>
+            </div>
+
+            <div class="file-list">
+              <div class="file">archivo1.txt</div>
+              <div class="file">foto.jpg</div>
+              <div class="file">setup.exe</div>
+              <div class="file">nota.doc</div>
+            </div>
+
+            <div class="ordered-container">
+              <h4>Paso a paso</h4>
+              <ol class="ordered-list">
+                <li>Seleccionar el archivo en la lista</li>
+                <li>Hacer clic en "Abrir"</li>
+                <li>Editar o ejecutar según sea necesario</li>
+                <li>Guardar los cambios y cerrar</li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+        <div class="statusbar">4 objetos &nbsp;&nbsp; Libre: 1.23 GB</div>
+      </section>
+
+    </main>
+
+    <footer class="footer-note">(Demo estilo Windows 98 creado con HTML/CSS)</footer>
+  </div>
+
+  <script>
+    // Actualizar reloj en tiempo real
+    function actualizarReloj() {
+      const ahora = new Date();
+      const horas = String(ahora.getHours()).padStart(2, "0");
+      const minutos = String(ahora.getMinutes()).padStart(2, "0");
+      const segundos = String(ahora.getSeconds()).padStart(2, "0");
+      document.getElementById("reloj").textContent = horas + ":" + minutos + ":" + segundos;
+    }
+    
+    // Reloj
+    actualizarReloj();
+    setInterval(actualizarReloj, 1000);
+
+    // Collapsible tree behavior for root menu
+    document.addEventListener('DOMContentLoaded', function(){
+      const toggles = document.querySelectorAll('.root-tree .caret');
+      toggles.forEach(t => {
+        t.style.cursor = 'pointer';
+        t.addEventListener('click', function(){
+          const parent = this.parentElement;
+          const nested = parent.querySelector('.nested');
+          if(!nested) return;
+          nested.classList.toggle('active');
+          this.classList.toggle('caret-down');
+        });
+      });
+
+      // File click behavior: try to fetch relative .txt files
+      document.querySelectorAll('.file').forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function(){
+          const name = this.textContent.trim();
+          if(!name.toLowerCase().endsWith('.txt')){
+            showViewerMessage('No es un .txt: ' + name);
+            return;
+          }
+          // Try fetch relative to this HTML file
+          loadTextFromPath(name);
+        });
+      });
+
+      // Root-tree click: if nested li text ends with .txt, try to load using a guessed path
+      document.querySelectorAll('.root-tree .nested li').forEach(li => {
+        const text = li.textContent.trim();
+        if(text.toLowerCase().endsWith('.txt')){
+          li.style.cursor = 'pointer';
+          li.addEventListener('click', function(e){
+            e.stopPropagation();
+            // Attempt to build a relative path: parent folder name + '/' + filename
+            const parentFolder = this.closest('.nested').previousElementSibling?.textContent?.trim() || '';
+            const folderSlug = parentFolder;
+            const path = encodeURI(folderSlug + '/' + text);
+            loadTextFromPath(path);
+          });
+        }
+      });
+
+      // File input button
+      const fileInput = document.getElementById('file-input');
+      document.getElementById('btn-load-local').addEventListener('click', ()=> fileInput.click());
+      fileInput.addEventListener('change', function(){
+        const f = this.files && this.files[0];
+        if(!f) return;
+        const reader = new FileReader();
+        reader.onload = function(ev){
+          showViewerContent(ev.target.result, f.name);
+        };
+        reader.readAsText(f);
+      });
+
+      document.getElementById('btn-clear').addEventListener('click', function(){
+        clearViewer();
+      });
+    });
+
+    function showViewerMessage(msg){
+      const pre = document.getElementById('text-viewer-content');
+      document.getElementById('viewer-filename').textContent = '';
+      pre.textContent = msg + '\n\n(Si no se puede cargar vía fetch desde file://, use el botón "Cargar .txt" para seleccionar un archivo local).';
+    }
+
+    function showViewerContent(text, filename){
+      const pre = document.getElementById('text-viewer-content');
+      document.getElementById('viewer-filename').textContent = filename ? ' - ' + filename : '';
+      pre.textContent = text;
+    }
+
+    function clearViewer(){
+      document.getElementById('viewer-filename').textContent = '';
+      document.getElementById('text-viewer-content').textContent = '(Seleccione un archivo .txt desde la lista o use "Cargar .txt")';
+    }
+
+    // Try to fetch text content; if fails show message
+    function loadTextFromPath(path){
+      // Normalize path (decode any accidental double encoding)
+      const decoded = decodeURI(path);
+      fetch(decoded).then(resp =>{
+        if(!resp.ok) throw new Error('HTTP ' + resp.status);
+        return resp.text();
+      }).then(txt => showViewerContent(txt, decoded))
+      .catch(err => {
+        showViewerMessage('No se pudo cargar: ' + decoded + ' (Error: ' + err.message + ')');
+      });
+    }
+  </script>
+</body>
+</html>

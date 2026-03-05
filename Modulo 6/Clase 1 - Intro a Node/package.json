@@ -1,0 +1,12 @@
+{
+  "name": "clase-1---intro-a-node",
+  "version": "1.0.0",
+  "description": "Primer servidor con node y express",
+  "license": "MIT",
+  "author": "Roberto Gonzalez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

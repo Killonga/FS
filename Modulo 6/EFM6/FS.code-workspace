@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "FS",
+			"path": "../.."
+		},
+		{
+			"name": "Marlin-2.1.2.7",
+			"path": "../../../Marlin-2.1.2.7"
+		}
+	],
+	"settings": {
+		"claudeCodeChat.permissions.yoloMode": false
+	}
+}
