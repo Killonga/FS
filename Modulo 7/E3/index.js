@@ -1,46 +1,72 @@
-let listaDeTareas = [];
+require('dotenv').config();
+const { pool } = require('./db'); 
 
-// Tareas iniciales de branding
-listaDeTareas.push("Desarrollar propuesta de identidad visual para cliente nuevo.");
-listaDeTareas.push("Diseñar logo principal y sus variaciones para el manual de marca.");
-listaDeTareas.push("Crear paleta cromática y sistema tipográfico para el branding.");
-listaDeTareas.push("Preparar mockups y pitch de presentación para entregar al cliente.");
+// 1. Función para INSERTAR una nueva tarea
+async function insertarTarea(titulo, descripcion) {
+    try {
+        const consulta = 'INSERT INTO tareas (titulo, descripcion) VALUES ($1, $2)';
+        const valores = [titulo, descripcion];
 
-function actualizarLista() {
-  const contenedor = document.getElementById("lista");
-  contenedor.innerHTML = "";
+        const resultado = await pool.query(consulta, valores);
 
-  console.clear();
-  console.log("--- Lista de Tareas Actualizada ---");
-
-  listaDeTareas.forEach((tarea, index) => {
-    console.log(`${index + 1}. ${tarea}`);
-
-    contenedor.innerHTML += `
-      <tr>
-        <td>${index + 1}</td>
-        <td>${tarea}</td>
-      </tr>
-    `;
-  });
-}
-
-actualizarLista();
-
-function gestionarTareas() {
-  let continuar = true;
-
-  while (continuar) {
-    let nuevaTarea = prompt("Ingresa una nueva tarea:");
-
-    if (nuevaTarea && nuevaTarea.trim() !== "") {
-      listaDeTareas.push(nuevaTarea.trim());
-      actualizarLista();
-    } else {
-      alert("Por favor ingresa una tarea válida.");
-      continue;
+        // Confirmamos usando rowCount
+        console.log(`✅ Tarea "${titulo}" insertada con éxito. Filas afectadas: ${resultado.rowCount}`);
+    } catch (error) {
+        console.error('❌ Error al insertar:', error.message);
     }
-
-    continuar = confirm("¿Deseas agregar otra tarea?");
-  }
 }
+
+// 2. Función para ACTUALIZAR una tarea existente
+async function actualizarTarea(id, nuevoTitulo, nuevaDescripcion) {
+    try {
+        const consulta = 'UPDATE tareas SET titulo = $1, descripcion = $2 WHERE id = $3';
+        const valores = [nuevoTitulo, nuevaDescripcion, id];
+
+        const resultado = await pool.query(consulta, valores);
+
+        if (resultado.rowCount > 0) {
+            console.log(`🔄 Tarea con ID ${id} actualizada. Filas afectadas: ${resultado.rowCount}`);
+        } else {
+            console.log(`⚠️ No se encontró la tarea con ID ${id} (0 filas afectadas).`);
+        }
+    } catch (error) {
+        console.error('❌ Error al actualizar:', error.message);
+    }
+}
+
+// 3. Función para ELIMINAR una tarea
+async function eliminarTarea(id) {
+    try {
+        const consulta = 'DELETE FROM tareas WHERE id = $1';
+        const valores = [id];
+
+        const resultado = await pool.query(consulta, valores);
+
+        if (resultado.rowCount > 0) {
+            console.log(`🗑️ Tarea con ID ${id} eliminada. Filas afectadas: ${resultado.rowCount}`);
+        } else {
+            console.log(`⚠️ No se pudo eliminar: El ID ${id} no existe.`);
+        }
+    } catch (error) {
+        console.error('❌ Error al eliminar:', error.message);
+    }
+}
+
+// --- ORQUESTACIÓN DE PRUEBAS ---
+async function main() {
+    console.log('--- 🛠️ Iniciando Pruebas de CRUD ---\n');
+
+    await insertarTarea('Estudiar SQL Injecton', 'Aprender por qué los marcadores $1 son vitales.');
+
+    // Actualizamos la tarea inicial 
+    await actualizarTarea(1, 'Aprender PostgreSQL', 'Completar todos los ejercicios de la guía de base de datos.');
+
+    // Intentamos eliminar la tarea que acabamos de crear 
+    await eliminarTarea(2);
+
+    // Cerramos la conexión al terminar
+    await pool.end();
+    console.log('\n--- ✨ Pruebas finalizadas y conexión cerrada ---');
+}
+
+main();
